@@ -1,0 +1,40 @@
+{
+  "schema": "revt",
+  "version": 1,
+  "name": "فيلا نموذجية",
+  "units": "m",
+  "createdAt": "2026-01-01T00:00:00.000Z",
+  "updatedAt": "2026-01-01T00:00:00.000Z",
+  "levels": [
+    { "id": "L0", "name": "الدور الأرضي", "elevation": 0, "height": 3.2 },
+    { "id": "L1", "name": "الدور الأول", "elevation": 3.2, "height": 3.2 }
+  ],
+  "materials": [
+    { "id": "concrete", "name": "خرسانة مسلحة", "color": "#9aa3b2", "density": 2400, "costPerM3": 350 },
+    { "id": "block", "name": "بلوك أسمنتي", "color": "#c7ccd6", "density": 1400, "costPerM3": 160 },
+    { "id": "brick", "name": "طوب أحمر", "color": "#b5651d", "density": 1800, "costPerM3": 220 },
+    { "id": "glass", "name": "زجاج", "color": "#7fc7e6", "density": 2500, "costPerM3": 900 },
+    { "id": "plaster", "name": "لياسة", "color": "#e8e2d4", "density": 1200, "costPerM3": 120 }
+  ],
+  "elements": [
+    { "id": "slab0", "kind": "slab", "levelId": "L0", "origin": { "x": -5, "y": -4 }, "width": 10, "depth": 8, "thickness": 0.25, "material": "concrete" },
+    { "id": "w1", "kind": "wall", "levelId": "L0", "a": { "x": -5, "y": -4 }, "b": { "x": 5, "y": -4 }, "height": 3.2, "thickness": 0.2, "material": "block" },
+    { "id": "w2", "kind": "wall", "levelId": "L0", "a": { "x": 5, "y": -4 }, "b": { "x": 5, "y": 4 }, "height": 3.2, "thickness": 0.2, "material": "block" },
+    { "id": "w3", "kind": "wall", "levelId": "L0", "a": { "x": 5, "y": 4 }, "b": { "x": -5, "y": 4 }, "height": 3.2, "thickness": 0.2, "material": "block" },
+    { "id": "w4", "kind": "wall", "levelId": "L0", "a": { "x": -5, "y": 4 }, "b": { "x": -5, "y": -4 }, "height": 3.2, "thickness": 0.2, "material": "block" },
+    { "id": "c1", "kind": "column", "levelId": "L0", "at": { "x": -5, "y": -4 }, "width": 0.4, "depth": 0.4, "height": 3.2, "material": "concrete" },
+    { "id": "c2", "kind": "column", "levelId": "L0", "at": { "x": 5, "y": -4 }, "width": 0.4, "depth": 0.4, "height": 3.2, "material": "concrete" },
+    { "id": "c3", "kind": "column", "levelId": "L0", "at": { "x": 5, "y": 4 }, "width": 0.4, "depth": 0.4, "height": 3.2, "material": "concrete" },
+    { "id": "c4", "kind": "column", "levelId": "L0", "at": { "x": -5, "y": 4 }, "width": 0.4, "depth": 0.4, "height": 3.2, "material": "concrete" },
+    { "id": "d1", "kind": "door", "levelId": "L0", "hostId": "w1", "t": 0.5, "width": 1.2, "height": 2.4, "sill": 0 },
+    { "id": "win1", "kind": "window", "levelId": "L0", "hostId": "w2", "t": 0.5, "width": 1.5, "height": 1.2, "sill": 0.9 },
+    { "id": "win2", "kind": "window", "levelId": "L0", "hostId": "w3", "t": 0.35, "width": 1.5, "height": 1.2, "sill": 0.9 },
+    { "id": "win3", "kind": "window", "levelId": "L0", "hostId": "w4", "t": 0.5, "width": 1, "height": 1.2, "sill": 0.9 },
+    { "id": "slab1", "kind": "slab", "levelId": "L1", "origin": { "x": -5, "y": -4 }, "width": 10, "depth": 8, "thickness": 0.25, "material": "concrete" },
+    { "id": "w5", "kind": "wall", "levelId": "L1", "a": { "x": -5, "y": -4 }, "b": { "x": 5, "y": -4 }, "height": 3.2, "thickness": 0.2, "material": "block" },
+    { "id": "w6", "kind": "wall", "levelId": "L1", "a": { "x": 5, "y": -4 }, "b": { "x": 5, "y": 4 }, "height": 3.2, "thickness": 0.2, "material": "block" },
+    { "id": "w7", "kind": "wall", "levelId": "L1", "a": { "x": 5, "y": 4 }, "b": { "x": -5, "y": 4 }, "height": 3.2, "thickness": 0.2, "material": "block" },
+    { "id": "w8", "kind": "wall", "levelId": "L1", "a": { "x": -5, "y": 4 }, "b": { "x": -5, "y": -4 }, "height": 3.2, "thickness": 0.2, "material": "block" },
+    { "id": "win4", "kind": "window", "levelId": "L1", "hostId": "w5", "t": 0.5, "width": 1.5, "height": 1.2, "sill": 0.9 }
+  ]
+}
