@@ -6,6 +6,9 @@ import TopBar from '@/components/TopBar'
 import ToolStrip from '@/components/ToolStrip'
 import BottomPanel from '@/components/BottomPanel'
 import PlanEditor from '@/components/PlanEditor'
+import HistoryControls from '@/components/HistoryControls'
+import ProPanel from '@/components/ProPanel'
+import ArchPanel from '@/components/ArchPanel'
 import { useStore } from '@/lib/store'
 
 const Viewport3D = dynamic(() => import('@/components/Viewport3D'), { ssr: false })
@@ -23,6 +26,9 @@ export default function Page() {
     <>
       <TopBar />
       <ToolStrip />
+      <HistoryControls />
+      <ProPanel />
+      <ArchPanel />
       <main className="relative flex-1 min-h-0">
         {!hydrated && (
           <div className="absolute inset-0 grid place-items-center text-slate-500 text-sm">…جارٍ التحميل</div>
